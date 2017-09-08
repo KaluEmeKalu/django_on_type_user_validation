@@ -1,0 +1,10 @@
+<!-- 
+Much of this code was taken from this blog post:
+  https://simpleisbetterthancomplex.com/tutorial/2016/08/29/how-to-work-with-ajax-request-with-django.html
+ -->
+<form data-validate-username-url="{% url 'my_app:validate_username' %}" action="{% url 'my_app:register' %}" method="post">
+    {% csrf_token %}
+	<input name="username" required="" id="id_username" maxlength="150" type="text">
+	....
+	<input type="submit" name="">
+</form>
